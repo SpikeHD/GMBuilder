@@ -1,2 +1,3 @@
 # GMBuilder
-VSCode extension for building GameMaker games
+
+Extension for building GameMaker projects in VSCode.
