@@ -6,7 +6,7 @@
 		{
 			"type": "npm",
 			"script": "watch",
-			"problemMatcher": "$ts-webpack-watch",
+			"problemMatcher": [],
 			"isBackground": true,
 			"presentation": {
 				"reveal": "never",
@@ -15,7 +15,9 @@
 			"group": {
 				"kind": "build",
 				"isDefault": true
-			}
+			},
+			"label": "npm: watch",
+			"detail": "webpack --watch"
 		},
 		{
 			"type": "npm",
