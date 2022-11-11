@@ -10,14 +10,12 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:gmbuilder.helloWorld"
+    "onCommand:gmbuilder.selectRuntime",
+    "onCommand:gmbuilder.selectBetaRuntime",
+    "onStartupFinished"
   ],
   "main": "./dist/extension.js",
   "contributes": {
-    "activationEvents": [
-      "onCommand:gmbuilder.selectRuntime",
-      "onCommand:gmbuilder.selectBetaRuntime"
-    ],
     "commands": [
       {
         "command": "gmbuilder.selectRuntime",

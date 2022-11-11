@@ -7,9 +7,11 @@ export function runtimeSelect() {
     
     if (!fs.existsSync(path)) {
       window.showErrorMessage('GMBuilder runtime path is not set, or is set incorrectly!');
-      commands.executeCommand('workbench.actions.openSettings', 'gmbuilder');
+      commands.executeCommand('workbench.action.openGlobalSettings');
       return;
     }
+
+    // const runtimes = fs.readdirSync();
   });
 }
 
@@ -19,7 +21,7 @@ export function betaRuntimeSelect() {
     
     if (!fs.existsSync(path)) {
       window.showErrorMessage('GMBuilder runtime path is not set, or is set incorrectly!');
-      commands.executeCommand('workbench.actions.openSettings', 'gmbuilder');
+      commands.executeCommand('workbench.action.openGlobalSettings');
       return;
     }
   });
