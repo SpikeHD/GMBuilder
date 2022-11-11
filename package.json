@@ -14,12 +14,45 @@
   ],
   "main": "./dist/extension.js",
   "contributes": {
+    "activationEvents": [
+      "onCommand:gmbuilder.selectRuntime",
+      "onCommand:gmbuilder.selectBetaRuntime"
+    ],
     "commands": [
       {
-        "command": "gmbuilder.helloWorld",
-        "title": "Hello World"
+        "command": "gmbuilder.selectRuntime",
+        "title": "Select GM Runtime"
+      },
+      {
+        "command": "gmbuilder.selectBetaRuntime",
+        "title": "Select GM Beta Runtime"
       }
-    ]
+    ],
+    "configuration": {
+      "title": "GMBuilder",
+      "properties": {
+        "gmbuilder.runtimePath": {
+          "type": "string",
+          "default": "",
+          "description": "Set the path to your GameMaker runtimes"
+        },
+        "gmbuilder.selectedRuntime": {
+          "type": "string",
+          "default": "",
+          "description": "Select the runtime you'd like to use (Press CTRL-SHIFT-P and run 'gmbuilder.selectRuntime' to autofill this setting)"
+        },
+        "gmbuilder.betaRuntimePath": {
+          "type": "string",
+          "default": "",
+          "description": "Set the path to your beta GameMaker runtimes"
+        },
+        "gmbuilder.selectedBetaRuntime": {
+          "type": "string",
+          "default": "",
+          "description": "Select the beta runtime you'd like to use (Press CTRL-SHIFT-P and run 'gmbuilder.selectBetaRuntime' to autofill this setting)"
+        }
+      }
+    }
   },
   "scripts": {
     "vscode:prepublish": "yarn run package",
